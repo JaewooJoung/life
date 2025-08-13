@@ -1,0 +1,32 @@
+[
+                {
+                    id: 1,
+                    name: "birthplace",
+                    spenthours: "777",
+                    coordinates: {
+                        latitude: 37.5810309,
+                        longitude: 127.0897448
+                    },
+                    note: "Where my story began - Seoul, South Korea"
+                },
+                {
+                    id: 2,
+                    name: "childhood home",
+                    spenthours: "2000",
+                    coordinates: {
+                        latitude: 40.7128,
+                        longitude: -74.0060
+                    },
+                    note: "Growing up in the city that never sleeps - New York"
+                },
+                {
+                    id: 3,
+                    name: "university",
+                    spenthours: "1500",
+                    coordinates: {
+                        latitude: 51.5074,
+                        longitude: -0.1278
+                    },
+                    note: "Learning and discovering myself - London"
+                }
+            ]
