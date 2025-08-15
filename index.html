@@ -53,7 +53,7 @@
             font-size: 1.1rem;
         }
 
-        .status-panel {
+        .file-upload {
             position: absolute;
             top: 120px;
             left: 20px;
@@ -62,26 +62,25 @@
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            min-width: 200px;
         }
 
-        .status-text {
-            color: #333;
+        .file-upload input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        .upload-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
             font-weight: bold;
-            margin-bottom: 5px;
+            transition: transform 0.2s;
         }
 
-        .status-detail {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .error {
-            color: #e74c3c;
-        }
-
-        .success {
-            color: #27ae60;
+        .upload-btn:hover {
+            transform: translateY(-2px);
         }
 
         #map {
@@ -240,9 +239,9 @@
             <p>Explore the places that shaped my story</p>
         </div>
 
-        <div class="status-panel" id="statusPanel">
-            <div class="status-text" id="statusText">Loading journey data...</div>
-            <div class="status-detail" id="statusDetail">Searching for journey.json</div>
+        <div class="file-upload">
+            <input type="file" id="jsonFile" accept=".json" />
+            <button class="upload-btn" onclick="loadData()">Load Journey</button>
         </div>
 
         <button class="back-btn" id="backBtn" onclick="zoomOut()">← Back to Overview</button>
@@ -283,61 +282,73 @@
                 maxZoom: 18
             }).addTo(map);
 
-            // Automatically load journey data from local file
-            loadJourneyFromFile();
+            // Add some sample data for demonstration
+            journeyData = [
+                {
+                    id: 1,
+                    name: "birthplace",
+                    spenthours: "777",
+                    coordinates: {
+                        latitude: 37.5810309,
+                        longitude: 127.0897448
+                    },
+                    note: "Where my story began - Seoul, South Korea"
+                },
+                {
+                    id: 2,
+                    name: "childhood home",
+                    spenthours: "2000",
+                    coordinates: {
+                        latitude: 40.7128,
+                        longitude: -74.0060
+                    },
+                    note: "Growing up in the city that never sleeps - New York"
+                },
+                {
+                    id: 3,
+                    name: "university",
+                    spenthours: "1500",
+                    coordinates: {
+                        latitude: 51.5074,
+                        longitude: -0.1278
+                    },
+                    note: "Learning and discovering myself - London"
+                }
+            ];
+            
+            displayLocations();
+            updateStats();
         }
 
-        async function loadJourneyFromFile() {
-            try {
-                updateStatus('Loading journey data...', 'Fetching journey.json from server', 'status-text');
-                
-                const response = await fetch('journey.json');
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                
-                const data = await response.json();
-                
-                if (!Array.isArray(data) || data.length === 0) {
-                    throw new Error('Invalid or empty data structure');
-                }
-
-                journeyData = data;
-                displayLocations();
-                updateStats();
-                
-                updateStatus('Journey loaded successfully!', `Found ${data.length} locations`, 'success');
-                
-                // Hide status panel after 3 seconds
-                setTimeout(() => {
-                    document.getElementById('statusPanel').style.display = 'none';
-                }, 3000);
-                
-            } catch (error) {
-                console.error('Error loading journey data:', error);
-                
-                let errorMessage = 'Failed to load journey.json';
-                let errorDetail = '';
-                
-                if (error.message.includes('404')) {
-                    errorDetail = 'File not found. Please ensure journey.json exists in the same directory.';
-                } else if (error.message.includes('Failed to fetch')) {
-                    errorDetail = 'Network error. Make sure you\'re serving this from a web server.';
-                } else {
-                    errorDetail = error.message;
-                }
-                
-                updateStatus(errorMessage, errorDetail, 'error');
+        function loadData() {
+            const fileInput = document.getElementById('jsonFile');
+            const file = fileInput.files[0];
+            
+            if (!file) {
+                alert('Please select a JSON file first!');
+                return;
             }
-        }
 
-
-
-        function updateStatus(text, detail, className) {
-            document.getElementById('statusText').textContent = text;
-            document.getElementById('statusDetail').textContent = detail;
-            document.getElementById('statusText').className = `status-text ${className}`;
+            showLoading(true);
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    journeyData = JSON.parse(e.target.result);
+                    clearMarkers();
+                    displayLocations();
+                    updateStats();
+                    showLoading(false);
+                    
+                    // Show success message
+                    alert(`Successfully loaded ${journeyData.length} locations!`);
+                } catch (error) {
+                    showLoading(false);
+                    alert('Error reading JSON file. Please check the format.');
+                    console.error('JSON parsing error:', error);
+                }
+            };
+            reader.readAsText(file);
         }
 
         function showLoading(show) {
@@ -439,6 +450,20 @@
         // Initialize the map when page loads
         document.addEventListener('DOMContentLoaded', function() {
             initMap();
+        });
+
+        // Handle file drag and drop
+        document.addEventListener('dragover', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('drop', function(e) {
+            e.preventDefault();
+            const files = e.dataTransfer.files;
+            if (files.length > 0 && files[0].type === 'application/json') {
+                document.getElementById('jsonFile').files = files;
+                loadData();
+            }
         });
     </script>
 </body>
