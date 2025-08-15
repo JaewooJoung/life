@@ -54,8 +54,8 @@
     "name": "higcroft",
     "spenthours": "8760",
     "coordinates": {
-      "latitude": 37.5666,
-      "longitude": 126.9783
+      "latitude": 42.69897,
+      "longitude": -73.21177
     },
     "note": "middle school in USA"
   },
@@ -64,8 +64,8 @@
     "name": "GT",
     "spenthours": "35040",
     "coordinates": {
-      "latitude": 37.5666,
-      "longitude": 126.9783
+      "latitude": 39.03342,
+      "longitude": -77.10909
     },
     "note": "highschool"
   },
@@ -104,8 +104,8 @@
     "name": "NHS",
     "spenthours": "17520",
     "coordinates": {
-      "latitude": 40.0640,
-      "longitude": -80.7209
+      "latitude": 40.0621607,
+      "longitude": -80.7240377
     },
     "note": "Wheeling"
   },
