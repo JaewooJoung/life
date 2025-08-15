@@ -1,32 +1,102 @@
 [
-                {
-                    id: 1,
-                    name: "birthplace",
-                    spenthours: "777",
-                    coordinates: {
-                        latitude: 37.5810309,
-                        longitude: 127.0897448
-                    },
-                    note: "Where my story began - Seoul, South Korea"
-                },
-                {
-                    id: 2,
-                    name: "childhood home",
-                    spenthours: "2000",
-                    coordinates: {
-                        latitude: 40.7128,
-                        longitude: -74.0060
-                    },
-                    note: "Growing up in the city that never sleeps - New York"
-                },
-                {
-                    id: 3,
-                    name: "university",
-                    spenthours: "1500",
-                    coordinates: {
-                        latitude: 51.5074,
-                        longitude: -0.1278
-                    },
-                    note: "Learning and discovering myself - London"
-                }
-            ]
+  {
+    "id": 1,
+    "name": "birthplace",
+    "spenthours": "777",
+    "coordinates": {
+      "latitude": 37.5665,
+      "longitude": 126.9780
+    },
+    "note": "Seoul, South Korea - Where my story began"
+  },
+  {
+    "id": 2,
+    "name": "elementary school",
+    "spenthours": "2400",
+    "coordinates": {
+      "latitude": 37.5519,
+      "longitude": 126.9918
+    },
+    "note": "Gangnam District - Early learning years"
+  },
+  {
+    "id": 3,
+    "name": "high school",
+    "spenthours": "3000",
+    "coordinates": {
+      "latitude": 37.5326,
+      "longitude": 127.0246
+    },
+    "note": "Songpa District - Formative teenage years"
+  },
+  {
+    "id": 4,
+    "name": "university",
+    "spenthours": "4000",
+    "coordinates": {
+      "latitude": 37.5943,
+      "longitude": 126.9568
+    },
+    "note": "Hongik University area - College life and growth"
+  },
+  {
+    "id": 5,
+    "name": "first job",
+    "spenthours": "2000",
+    "coordinates": {
+      "latitude": 37.5172,
+      "longitude": 127.0473
+    },
+    "note": "Gangdong District - Professional beginnings"
+  },
+  {
+    "id": 6,
+    "name": "travel destination",
+    "spenthours": "168",
+    "coordinates": {
+      "latitude": 35.6762,
+      "longitude": 139.6503
+    },
+    "note": "Tokyo, Japan - Memorable travel experience"
+  },
+  {
+    "id": 7,
+    "name": "study abroad",
+    "spenthours": "4380",
+    "coordinates": {
+      "latitude": 40.7589,
+      "longitude": -73.9851
+    },
+    "note": "New York City, USA - International experience"
+  },
+  {
+    "id": 8,
+    "name": "current home",
+    "spenthours": "1500",
+    "coordinates": {
+      "latitude": 37.4979,
+      "longitude": 127.0276
+    },
+    "note": "Seocho District - Current residence"
+  },
+  {
+    "id": 9,
+    "name": "favorite cafe",
+    "spenthours": "300",
+    "coordinates": {
+      "latitude": 37.5200,
+      "longitude": 127.0530
+    },
+    "note": "Local hangout spot - Coffee and contemplation"
+  },
+  {
+    "id": 10,
+    "name": "graduation ceremony",
+    "spenthours": "5",
+    "coordinates": {
+      "latitude": 37.5500,
+      "longitude": 126.9270
+    },
+    "note": "Yeouido - Important milestone celebration"
+  }
+]
