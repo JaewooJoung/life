@@ -1,102 +1,182 @@
 [
   {
     "id": 1,
-    "name": "birthplace",
-    "spenthours": "777",
+    "name": "면목동",
+    "spenthours": "17520",
     "coordinates": {
-      "latitude": 37.5665,
-      "longitude": 126.9780
+      "latitude": 37.5666,
+      "longitude": 126.9783
     },
-    "note": "Seoul, South Korea - Where my story began"
+    "note": "birth place"
   },
   {
     "id": 2,
-    "name": "elementary school",
-    "spenthours": "2400",
+    "name": "신근리",
+    "spenthours": "17520",
     "coordinates": {
-      "latitude": 37.5519,
-      "longitude": 126.9918
+      "latitude": 37.5666,
+      "longitude": 126.9783
     },
-    "note": "Gangnam District - Early learning years"
+    "note": "brother was born"
   },
   {
     "id": 3,
-    "name": "high school",
-    "spenthours": "3000",
+    "name": "청량리",
+    "spenthours": "17520",
     "coordinates": {
-      "latitude": 37.5326,
-      "longitude": 127.0246
+      "latitude": 37.5666,
+      "longitude": 126.9783
     },
-    "note": "Songpa District - Formative teenage years"
+    "note": "we moved to aunties house"
   },
   {
     "id": 4,
-    "name": "university",
-    "spenthours": "4000",
+    "name": "가락동",
+    "spenthours": "35040",
     "coordinates": {
-      "latitude": 37.5943,
-      "longitude": 126.9568
+      "latitude": 37.5666,
+      "longitude": 126.9783
     },
-    "note": "Hongik University area - College life and growth"
+    "note": "elementary school"
   },
   {
     "id": 5,
-    "name": "first job",
-    "spenthours": "2000",
+    "name": "삼전동",
+    "spenthours": "17520",
     "coordinates": {
-      "latitude": 37.5172,
-      "longitude": 127.0473
+      "latitude": 37.5666,
+      "longitude": 126.9783
     },
-    "note": "Gangdong District - Professional beginnings"
+    "note": "first house"
   },
   {
     "id": 6,
-    "name": "travel destination",
-    "spenthours": "168",
+    "name": "higcroft",
+    "spenthours": "8760",
     "coordinates": {
-      "latitude": 35.6762,
-      "longitude": 139.6503
+      "latitude": 37.5666,
+      "longitude": 126.9783
     },
-    "note": "Tokyo, Japan - Memorable travel experience"
+    "note": "middle school in USA"
   },
   {
     "id": 7,
-    "name": "study abroad",
-    "spenthours": "4380",
+    "name": "GT",
+    "spenthours": "35040",
     "coordinates": {
-      "latitude": 40.7589,
-      "longitude": -73.9851
+      "latitude": 37.5666,
+      "longitude": 126.9783
     },
-    "note": "New York City, USA - International experience"
+    "note": "highschool"
   },
   {
     "id": 8,
-    "name": "current home",
-    "spenthours": "1500",
+    "name": "WJU",
+    "spenthours": "8760",
     "coordinates": {
-      "latitude": 37.4979,
-      "longitude": 127.0276
+      "latitude": 40.0640,
+      "longitude": -80.7209
     },
-    "note": "Seocho District - Current residence"
+    "note": "Wheeling"
   },
   {
     "id": 9,
-    "name": "favorite cafe",
-    "spenthours": "300",
+    "name": "포천",
+    "spenthours": "26280",
     "coordinates": {
-      "latitude": 37.5200,
-      "longitude": 127.0530
+      "latitude": 37.5666,
+      "longitude": 126.9783
     },
-    "note": "Local hangout spot - Coffee and contemplation"
+    "note": "military"
   },
   {
     "id": 10,
-    "name": "graduation ceremony",
-    "spenthours": "5",
+    "name": "WJU",
+    "spenthours": "26280",
     "coordinates": {
-      "latitude": 37.5500,
-      "longitude": 126.9270
+      "latitude": 40.0640,
+      "longitude": -80.7209
     },
-    "note": "Yeouido - Important milestone celebration"
+    "note": "Wheeling"
+  },
+  {
+    "id": 11,
+    "name": "NHS",
+    "spenthours": "17520",
+    "coordinates": {
+      "latitude": 40.0640,
+      "longitude": -80.7209
+    },
+    "note": "Wheeling"
+  },
+  {
+    "id": 12,
+    "name": "양재",
+    "spenthours": "8760",
+    "coordinates": {
+      "latitude": 37.5666,
+      "longitude": 126.9783
+    },
+    "note": "MIL/테라피"
+  },
+  {
+    "id": 13,
+    "name": "세종",
+    "spenthours": "35040",
+    "coordinates": {
+      "latitude": 37.5666,
+      "longitude": 126.9783
+    },
+    "note": "now Continental"
+  },
+  {
+    "id": 14,
+    "name": "Southampton",
+    "spenthours": "17520",
+    "coordinates": {
+      "latitude": 50.9040,
+      "longitude": -1.4043
+    },
+    "note": "Southampton Univ."
+  },
+  {
+    "id": 15,
+    "name": "송도",
+    "spenthours": "26280",
+    "coordinates": {
+      "latitude": 37.4563,
+      "longitude": 126.7052
+    },
+    "note": "now Clemove"
+  },
+  {
+    "id": 16,
+    "name": "판교",
+    "spenthours": "43800",
+    "coordinates": {
+      "latitude": 37.5666,
+      "longitude": 126.9783
+    },
+    "note": "Now Autoever"
+  },
+  {
+    "id": 17,
+    "name": "Ningbo",
+    "spenthours": "43800",
+    "coordinates": {
+      "latitude": 29.8683,
+      "longitude": 121.5440
+    },
+    "note": "Geely"
+  },
+  {
+    "id": 18,
+    "name": "Goteborg",
+    "spenthours": "26280",
+    "coordinates": {
+      "latitude": 57.7072,
+      "longitude": 11.9668
+    },
+    "note": "Tata"
   }
 ]
